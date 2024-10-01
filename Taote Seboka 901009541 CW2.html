@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Progressions with Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9faff;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            position: relative;
+        }
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #5a47f5;
+        }
+
+
+        .notification {
+            position: relative;
+        }
+
+
+        .notification img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+
+        .notification-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #f44336;
+            color: white;
+            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 50%;
+        }
+
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+        .profile-section img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+
+        .profile-details h2 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+
+        .profile-details p {
+            margin: 5px 0 0;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+
+   
+        .ratings {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+
+        .star {
+            font-size: calc(1em + 0.5vw);
+        
+            color: #f4c542;
+            margin-right: 3px;
+        }
+
+
+        .ratings span {
+            font-size: calc(1em + 0.2vw);
+         
+            color: #333;
+            margin-left: 10px;
+        }
+
+
+      
+        h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 15px 0;
+        }
+
+
+        .quote {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+
+
+      
+        .finished-classes {
+            margin-top: 20px;
+        }
+
+
+        .finished-classes-title {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+
+        .class-box {
+            background-color: #eef3fd;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .class-box img {
+            width: 80px;
+            border-radius: 10px;
+        }
+
+
+        .class-info {
+            text-align: left;
+            color: #3f51b5;
+            font-size: 1.2em;
+            margin-left: 15px;
+        }
+
+
+        .play-btn {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+
+        .play-btn:hover {
+            background-color: #303f9f;
+        }
+
+
+        .read-more-btn {
+            background-color: #5a47f5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .read-more-btn:hover {
+            background-color: #4135c3;
+        }
+
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+
+        .video-modal video {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .extra-content {
+            display: none;
+            color: #666;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="container">
+       
+        <div class="header">
+            <div class="logo">terhie</div>
+            <div class="notification">
+                <img src="20240706_185320.jpg" alt="Profile Picture">
+                <div class="notification-count">2</div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <img src="20240706_185320.jpg" alt="Profile Picture">
+            <div class="profile-details">
+                <h2>Dominique Metcalf</h2>
+                <p>Cleveland, Ohio</p>
+                <div class="ratings">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span>4.6</span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Chord Progressions</h3>
+        <p class="quote">
+            "Advertising is telling the world how great you are, while publicity is having others tell the world how great you are for your advert..." 
+            <span class="extra-content">This is an additional part of the description that was hidden before. Now the user can read the full content after clicking "Read More".</span>
+        </p>
+        <button class="read-more-btn" onclick="toggleReadMore()">Read More</button>
+
+        <div class="finished-classes">
+            <div class="finished-classes-title">Finished Classes</div>
+            <div class="class-box">
+                <div class="class-info">
+                    <div>Chord Progression</div>
+                    <div style="font-size: 0.9em; color: #666;">03 September</div>
+                </div>
+                <img src="20210715_103938.jpg" alt="Class Image">
+                <div class="play-btn" onclick="showVideo()">▶</div>
+            </div>
+        </div>
+
+
+      
+    <div class="video-modal" id="videoModal">
+        <div class="close-btn" onclick="closeVideo()">✖</div>
+        <video id="videoPlayer" controls>
+            <source src="Rick and Morty x Run The Jewels- Oh Mama _ Adult Swim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <script>
+       function showVideo() {
+            document.getElementById('videoModal').style.display = 'flex';
+            document.getElementById('videoPlayer').play();
+        }
+
+
+        function closeVideo() {
+            const video = document.getElementById('videoPlayer');
+            video.pause();
+            video.currentTime = 0;
+            document.getElementById('videoModal').style.display = 'none';
+        }
+        
+        function toggleReadMore() {
+            var extraContent = document.querySelector('.extra-content');
+            var readMoreBtn = document.querySelector('.read-more-btn');
+
+
+            if (extraContent.style.display === 'none') {
+                extraContent.style.display = 'inline';
+                readMoreBtn.textContent = 'Read Less';
+            } else {
+                extraContent.style.display = 'none';
+                readMoreBtn.textContent = 'Read More';
+            }
+        }
+    </script>
+
+
+</body>
+
+
+</html>
